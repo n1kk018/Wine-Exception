@@ -9,7 +9,7 @@ package fr.afcepf.atod.vin.data.exception;
  * Erreurs renvoyees par notre appli
  * @author ronan
  */
-public enum CodeErreurVin {
+public enum WineErrorCode {
     /**
      * Liste de toutes les erreurs.
      */

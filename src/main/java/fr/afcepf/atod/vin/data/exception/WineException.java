@@ -9,17 +9,17 @@ package fr.afcepf.atod.vin.data.exception;
  * Exceptions personnalisees pour notre projet
  * @author ronan
  */
-public class ExceptionsVin extends Exception {
+public class WineException extends Exception {
     /**
      * erreur generique dans l'enumeration
      */
-    private CodeErreurVin erreurVin;
+    private WineErrorCode erreurVin;
     
     /**
      * 
      * @param message 
      */
-    public ExceptionsVin(String message){
+    public WineException(String message){
         super(message);
     }
     /**
@@ -27,17 +27,17 @@ public class ExceptionsVin extends Exception {
      * @param erreurVin
      * @param message 
      */
-    public ExceptionsVin(CodeErreurVin erreurVin, String message) {
+    public WineException(WineErrorCode erreurVin, String message) {
         super(message);
         this.erreurVin = erreurVin;
     }
     
 
-    public CodeErreurVin getErreurVin() {
+    public WineErrorCode getErreurVin() {
         return erreurVin;
     }
 
-    public void setErreurVin(CodeErreurVin erreurVin) {
+    public void setErreurVin(WineErrorCode erreurVin) {
         this.erreurVin = erreurVin;
     }
 }
