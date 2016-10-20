@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 package fr.afcepf.atod.vin.data.exception;
-
 /**
- * Erreurs renvoyees par notre appli
+ * Erreurs renvoyees par notre appli.
  * @author ronan
  */
 public enum WineErrorCode {

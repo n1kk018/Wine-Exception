@@ -6,38 +6,46 @@
 package fr.afcepf.atod.vin.data.exception;
 
 /**
- * Exceptions personnalisees pour notre projet
+ * Exceptions personnalisees pour notre projet.
  * @author ronan
  */
 public class WineException extends Exception {
     /**
-     * erreur generique dans l'enumeration
+     * Identifiant de sérialisation.
+     */
+    private static final long serialVersionUID = 1L;
+    /**
+     * erreur generique dans l'enumeration.
      */
     private WineErrorCode erreurVin;
-    
     /**
-     * 
-     * @param message 
+     * Constructeur avec message.
+     * @param message message
      */
-    public WineException(String message){
+    public WineException(String message) {
         super(message);
     }
     /**
-     * 
-     * @param erreurVin
-     * @param message 
+     * Constructeur avec code erreur et message.
+     * @param paramErreurVin code erreur
+     * @param message message
      */
-    public WineException(WineErrorCode erreurVin, String message) {
+    public WineException(WineErrorCode paramErreurVin, String message) {
         super(message);
-        this.erreurVin = erreurVin;
+        erreurVin = paramErreurVin;
     }
-    
-
+    /**
+     * Code erreur accesseur.
+     * @return erreurVin code d'erreur
+     */
     public WineErrorCode getErreurVin() {
         return erreurVin;
     }
-
-    public void setErreurVin(WineErrorCode erreurVin) {
-        this.erreurVin = erreurVin;
+    /**
+     * Code erreur mutateur.
+     * @param paramErreurVin code erreur
+     */
+    public void setErreurVin(WineErrorCode paramErreurVin) {
+        erreurVin = paramErreurVin;
     }
 }
